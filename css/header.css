@@ -1,0 +1,126 @@
+:root {
+  --bg-body: #F9BF4E;
+  --text-color: #000000;
+  --bg-cont: rgba(241, 206, 142, 0.467);
+  --color-head-items: #fff;
+  --profile-list: #fbebc4;
+  --anim-black-height: 0px;
+  --blocks-color-profile: #f9d999e7;
+  --footer-colour: #7e632b;
+}
+
+.container {
+  max-width: 1650px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: var(--bg-cont);
+  font-family: 'Montserrat Alternates';
+  font-weight: 400;
+  color: var(--text-color);
+  border-bottom: 7px solid #E4B04B;
+}
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------- */
+
+.header {
+  margin-top: 40px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  padding: 20px 0;
+  margin-right: 70px;
+}
+
+.header__nav-list {
+  display: flex;
+  font-size: 32px;
+}
+
+.header__nav-item {
+  padding: 5px;
+  margin-right: 90px;
+  background-color: var(--color-head-items);
+  border: 1px solid #E4B04B;
+  border-radius: 10px;
+  box-shadow: 1px 5px 4px #E4B04B;
+}
+
+.profile {
+  position: relative;
+  display: inline-block;
+}
+
+#profile__img {
+  max-width: 110px;
+  border: 3px solid #ffffffb6;
+  border-radius: 50%;
+}
+
+.profile__list {
+  display: none;
+  position: absolute;
+  padding: 3px;
+  font-size: 20px;
+  top: 96px;
+  right: 1px;
+  background-color: var(--profile-list);
+  border: 3px solid #E4B04B;
+  box-shadow: 2px 3px 5px #E4B04B;
+  z-index: 1;
+  list-style-type: none;
+}
+
+.profile:hover .profile__list {
+  display: block;
+}
+
+.profile__sign-link {
+  margin: 5px;
+  padding: 10px;
+  background-color: var(--blocks-color-profile);
+  box-shadow: 2px 3px 3px #654f225b;
+  color: var(--text-color-profile);
+}
+
+.profile__sign-link:first-child {
+  margin-top: 0px;
+}
+
+/* ---------------FOOTER---------------- */
+.container_footer {
+  background-color: var(--footer-colour);
+}
+
+.footer_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  font-size: 20px;
+  color: #e6d5b2;
+}
+
+.footer__colums-heading {
+  margin-bottom: 10px;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+}

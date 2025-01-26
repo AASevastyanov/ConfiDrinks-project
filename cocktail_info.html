@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="files/candy_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/cocktail_info.css">
+  <title>ConfiDrinks - Информация о коктейле</title>
+</head>
+
+<body>
+
+  <video id="background-video" autoplay muted loop>
+    <source src="files/wallpaper.mp4" type="video/mp4">
+    <source src="files/wallpaper.webm" type="video/webm">
+    Ваш браузер не поддерживает HTML5 видео.
+  </video>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__nav">
+        <a class="header__logo" href="main.html">
+          <img src="files/logo.svg" alt="logo">
+        </a>
+        <div class="header__nav-list">
+          <a class="header__nav-item" href="favorites.html">Избранные</a>
+          <a class="header__nav-item" href="aboutUs.html">Информация о нас</a>
+        </div>
+        <div class="header__user-nav">
+          <div class="profile">
+            <a>
+              <img src="files/profile.svg" alt="profile" id="profile__img">
+            </a>
+            <ul class="profile__list">
+              <a href="registration.html" >
+                <li class="profile__sign-link">
+                  Вход/Регистрация
+                </li>
+              </a>
+              <a href="my_profile.html" >
+                <li class="profile__sign-link">
+                  Мой профиль
+                </li>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <div class="cocktail-info">
+        <img class="cocktail-info__image" src="" alt="фото коктейля">
+        <div class="cocktail-info__type text_back_color">Описание:
+          <p class="cocktail-info__desk"></p>
+        </div>
+        <h1 class="cocktail-info__name text_back_color"></h1>
+        <div class="cocktail-info__ing ">
+          <p class="cocktail-info__ing-title">Ингридиенты 🖍</p>
+          <ul class="cocktail-info__ing-list text_back_color">
+          </ul>
+        </div>
+        <ul class="cocktail-info__recept-title text_back_color">Рецепт создания коктейля:
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container container_footer">
+      <div class="footer_main">
+        <p>&copy; 2025, ConfiDrinks project. Все права защищены.</p>
+        <div class="footer__columns">
+          <p class="footer__colums-heading">Связаться с нами:</p>
+          <div class="footer__column-contacts">
+            <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+            <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+          </div>
+        </div>
+        <div class="footer__columns">
+          <p class="footer__colums-heading">Соцсети</p>
+          <div class="footer__column-links">
+            <a class="footer__column-link" href="#"><img src="files/vk_color_white.svg" alt="Vk">Вконтакте</a>
+            <a class="footer__column-link" href="#"><img src="files/tiktok_color_white.svg" alt="TikTok">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/cocktailInfo.js"></script>
+</body>
+
+</html>

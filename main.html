@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="files/candy_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/note_style.css">
+  <link rel="stylesheet" href="css/main_style.css">
+  <title>ConfiDrinks - сделай сам и насладись!</title>
+</head>
+
+<body>
+
+  <video id="background-video" autoplay muted loop>
+    <source src="files/wallpaper.mp4" type="video/mp4">
+    <source src="files/wallpaper.webm" type="video/webm">
+    Ваш браузер не поддерживает HTML5 видео.
+  </video>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__nav">
+        <a class="header__logo" href="main.html">
+          <img src="files/logo.svg" alt="logo">
+        </a>
+        <div class="header__nav-list">
+          <a class="header__nav-item" href="favorites.html">Избранные</a>
+          <a class="header__nav-item" href="aboutUs.html">Информация о нас</a>
+        </div>
+        <div class="header__user-nav">
+          <div class="profile">
+            <a>
+              <img src="files/profile.svg" alt="profile" id="profile__img">
+            </a>
+            <ul class="profile__list">
+              <a href="registration.html" >
+                <li class="profile__sign-link">
+                  Вход/Регистрация
+                </li>
+              </a>
+              <a href="my_profile.html" >
+                <li class="profile__sign-link">
+                  Мой профиль
+                </li>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main class="content">
+    <div class="container">
+      <div class="content__block">
+        <aside class="search">
+          <div class="search__block">
+            <label for="search__block-input">Какой коктейль ищешь? :
+              <input type="text" name="search__input" autocomplete="off" id="search__input">
+            </label>
+            <ul class="search__block-filter">
+              <li class="search__block-checkbox">
+                <label for="filter-checkbox1">
+                  Опция 1
+                  <input type="checkbox" name="filter-checkbox" id="filter-checkbox1"></li>
+                </label>
+              <li class="search__block-checkbox">
+                <label for="filter-checkbox2">
+                  Опция 1
+                  <input type="checkbox" name="filter-checkbox" id="filter-checkbox2"></li>
+                </label>
+              <li class="search__block-checkbox">
+                <label for="filter-checkbox3">
+                  Опция 1
+                  <input type="checkbox" name="filter-checkbo" id="filter-checkbox3"></li>
+                </label>
+            </ul>
+          </div>
+        </aside>
+        <article class="cocktails">
+          <div class="cocktails__content" id="coct-page">
+          </div>
+          <button id="show-more">Показать ещё</button>
+        </article>
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="container container_footer">
+      <div class="footer_main">
+        <p>&copy; 2025, ConfiDrinks project. Все права защищены.</p>
+        <div class="footer__columns">
+          <p class="footer__colums-heading">Связаться с нами:</p>
+          <div class="footer__column-contacts">
+            <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+            <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+          </div>
+        </div>
+        <div class="footer__columns">
+          <p class="footer__colums-heading">Соцсети</p>
+          <div class="footer__column-links">
+            <a class="footer__column-link" href="#"><img src="files/vk_color_white.svg" alt="Vk">Вконтакте</a>
+            <a class="footer__column-link" href="#"><img src="files/tiktok_color_white.svg" alt="TikTok">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script src="js/warning.js"></script> -->
+  <script src="js/cocktailAppend.js"></script>
+</body>
+
+</html>

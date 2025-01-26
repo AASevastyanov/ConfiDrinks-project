@@ -1,0 +1,85 @@
+body {
+  background-color: #F9BF4E;
+}
+
+.container {
+  padding: 0 70px;
+  
+}
+
+.text_back_color {
+  background-color: #7e622b8e;
+}
+/* ----------------------------------------- */
+
+.cocktail-info {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  column-gap: 130px;
+  row-gap: 30px;
+  grid-template-rows: 100px 400px 300px 1fr;
+  padding-top: 50px;
+  color: #f4e5c8;
+  
+}
+
+.cocktail-info__image {
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px; */
+}
+
+.cocktail-info__desk {
+  font-size: 28px;
+  padding: 10px;
+}
+
+.cocktail-info__type {
+  grid-row: 3/5;
+  font-size: 24px;
+  padding: 22px;
+
+}
+
+.cocktail-info__name {
+  font-size: 42px;
+  margin: 0 auto;
+  padding: 22px;
+
+}
+
+.cocktail-info__ing {
+  margin: 0 auto;
+}
+
+.cocktail-info__ing-title {
+  font-size: 28px;
+  padding: 20px;
+  background-color: #F9BF4E;
+  color: #544018;
+  
+}
+
+.cocktail-info__ing-list {
+  font-size: 28px;
+  padding: 10px 0 20px 40px;
+}
+
+.cocktail-info__ing-value {
+  list-style-type: disc;
+}
+
+.cocktail-info__recept-title {
+  font-size: 28px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.cocktail-info__recept {
+  font-size: 26px;
+  margin-top: 10px;
+
+}
