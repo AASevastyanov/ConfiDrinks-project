@@ -1,15 +1,10 @@
 let favor = JSON.parse(localStorage.getItem('favorite')) || [];
 
-console.log("Избранных ID:", favor);
-
 for (let cId of favor) {
-  // Для каждого ID делаем запрос JSON
   fetch('js/cocktails.json')
     .then(res => res.json())
     .then(data => {
       let currentDrink = data.drinks.find(dr => dr.idDrink === cId);
-      console.log("currentDrink:", currentDrink);
-
       if (currentDrink) {
         createCocktailCard(currentDrink);
       }

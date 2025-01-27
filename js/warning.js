@@ -1,27 +1,18 @@
-ИСПРАВИТЬ ДОПОЛНИТЬ
-// window.addEventListener('load', () => {
-//     const warning = document.getElementById('warning');
-//     const isHidden = localStorage.getItem('warningHidden');
-//     const textStart = document.querySelector('start');
-//     const textNo = document.querySelector('no');
-//     // Если элемента не скрыто, делаем его видимым
-//     if (isHidden !== 'true') {
-//       warning.style.display = 'flex'; // Показываем элемент
-//     }
-//     // Добавляем обработчики событий для кнопок
-//     document.querySelectorAll('.warning_cont-button').forEach(button => {
-//     button.addEventListener('click', () => {
-//         if (button.textContent === 'Да') {
-//             warning.style.display = 'none';
-//             localStorage.setItem('warningHidden', 'true');;
-//             } else if (button.textContent === 'Нет') {
-//             textStart.style.display = 'none';
-//             textNo.style.display = 'block';
-//             }
-//          // Полное скрытие
-//          // Сохраняем состояние
-        
-//     });
-//     });
-// })
-// 
+if (localStorage.getItem('warning') != 'none') {
+  document.getElementById('warning').style.display = 'block';
+}
+document.getElementById('warningYes').addEventListener('click', () => {
+  localStorage.setItem('warning', 'none');
+  checkWarn();
+});
+document.getElementById('warningNo').addEventListener('click', () => {
+  localStorage.setItem('warning', 'block');
+  checkWarn();
+});
+
+function checkWarn() {
+  if ((localStorage.getItem('warning')) == 'block') {
+    document.querySelector('.warning__text').style.display = 'none';
+    document.querySelector('.warning__text--hidden').style.display = 'block';
+  } else (document.getElementById('warning').style.display = 'none');
+}

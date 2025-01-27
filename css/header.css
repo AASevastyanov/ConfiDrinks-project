@@ -1,24 +1,14 @@
-:root {
-  --bg-body: #F9BF4E;
-  --text-color: #000000;
-  --bg-cont: rgba(241, 206, 142, 0.467);
-  --color-head-items: #fff;
-  --profile-list: #fbebc4;
-  --anim-black-height: 0px;
-  --blocks-color-profile: #f9d999e7;
-  --footer-colour: #7e632b;
-}
-
 .container {
   max-width: 1650px;
   padding: 0 15px;
   margin: 0 auto;
-  background-color: var(--bg-cont);
+  background-color: rgba(241, 206, 142, 0.467);
   font-family: 'Montserrat Alternates';
   font-weight: 400;
-  color: var(--text-color);
+  color: #000;
   border-bottom: 7px solid #E4B04B;
 }
+
 #background-video {
   position: fixed;
   top: 0;
@@ -55,7 +45,7 @@
 .header__nav-item {
   padding: 5px;
   margin-right: 90px;
-  background-color: var(--color-head-items);
+  background-color: #fff;
   border: 1px solid #E4B04B;
   border-radius: 10px;
   box-shadow: 1px 5px 4px #E4B04B;
@@ -79,7 +69,7 @@
   font-size: 20px;
   top: 96px;
   right: 1px;
-  background-color: var(--profile-list);
+  background-color: #fbebc4;
   border: 3px solid #E4B04B;
   box-shadow: 2px 3px 5px #E4B04B;
   z-index: 1;
@@ -93,9 +83,9 @@
 .profile__sign-link {
   margin: 5px;
   padding: 10px;
-  background-color: var(--blocks-color-profile);
+  background-color: #f9d999e7;
   box-shadow: 2px 3px 3px #654f225b;
-  color: var(--text-color-profile);
+  color: #000;
 }
 
 .profile__sign-link:first-child {
@@ -104,7 +94,7 @@
 
 /* ---------------FOOTER---------------- */
 .container_footer {
-  background-color: var(--footer-colour);
+  background-color: #7e632b;
 }
 
 .footer_main {
@@ -123,4 +113,61 @@
 .footer__column-links {
   display: flex;
   flex-direction: column;
+}
+
+/* ---------media------------ */
+@media (max-width:992px) {
+  .header__nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .header__nav-list {
+    font-size: 32px;
+    
+  }
+}
+
+@media (max-width: 767px) {
+  .header__nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .header__nav-list {
+    font-size: 24px;
+    column-gap: 15px;
+  }
+
+  .header__nav-item {
+    margin: 0;
+  }
+
+  .footer_main {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header__nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  
+  .header__logo {
+    margin-right: 20px;
+  }
+
+  #logo {
+    width: 280px;
+  }
+
+  .header__nav-list {
+    font-size: 20px;
+    column-gap: 15px;
+  }
+
+  .footer_main {
+    padding: 0;
+    font-size: 12px;
+  }
 }

@@ -4,9 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="files/candy_icon.ico" type="image/x-icon">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/about_us.css">
+  <title>ConfiDrinks - Информация о нас</title>
 </head>
 <body>
-  
+  <video id="background-video" autoplay muted loop>
+    <source src="files/wallpaper.mp4" type="video/mp4">
+    <source src="files/wallpaper.webm" type="video/webm">
+    Ваш браузер не поддерживает HTML5 видео.
+  </video>
+  <header class="header">
+    <div class="container">
+      <div class="header__nav">
+        <a class="header__logo" href="main.html">
+          <img src="files/logo.svg" id="logo" alt="logo">
+        </a>
+        <div class="header__nav-list">
+          <a class="header__nav-item" href="favorites.html">Избранные</a>
+          <a class="header__nav-item" href="about_us.html">Информация о нас</a>
+        </div>
+        <div class="header__user-nav">
+          <div class="profile">
+            <a>
+              <img src="files/profile.svg" alt="profile" id="profile__img">
+            </a>
+            <ul class="profile__list">
+              <a href="registration.html" >
+                <li class="profile__sign-link">
+                  Вход/Регистрация
+                </li>
+              </a>
+              <a href="my_profile.html" >
+                <li class="profile__sign-link">
+                  Мой профиль
+                </li>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="about">
+    <div class="container about__container">
+      <h1 class="about__title">О ConfiDrinks</h1>
+      <p class="about__subtitle">
+        Добро пожаловать на ConfiDrinks! Мы — команда энтузиастов барного дела,
+        которая создала этот сайт, чтобы делиться рецептами
+        и вдохновением для создания лучших коктейлей.
+      </p>
+
+      <section class="about__section">
+        <h2>Наша история</h2>
+        <p>
+          Всё началось с простой идеи: собрать в одном месте
+          все любимые коктейли, чтобы можно было быстро находить рецепты
+          и делиться ими с друзьями. Со временем проект вырос в полноценную
+          базу из различных напитков, от классики до авторских миксов.
+        </p>
+      </section>
+
+      <section class="about__section">
+        <h2>Почему мы это делаем</h2>
+        <p>
+          Мы считаем, что каждый может стать небольшим барменом у себя дома.
+          Для этого нужны всего лишь желание, немного знаний и качественные
+          ингредиенты. На ConfiDrinks мы стремимся объединять любителей
+          смешанных напитков и помогать им расширять свои кулинарные
+          горизонты.
+        </p>
+      </section>
+
+      <section class="about__section about__team">
+        <h2>Наша команда</h2>
+        <p>
+          В создании сайта участвуют фронтенд-разработчики, бармены-консультанты
+          и просто фанаты креативных коктейлей. Вместе мы растём, узнавая
+          новые рецепты и техники, и стараемся сделать сайт удобным и интересным
+          для каждого гостя.
+        </p>
+      </section>
+
+      <section class="about__section about__contacts">
+        <h2>Контакты</h2>
+        <p>
+          Если у вас есть идеи, вопросы или вы хотите предложить свой уникальный рецепт —
+          смело пишите на нашу почту: <a href="mailto:info@confidrinks.ru">info@confidrinks.ru</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container container_footer">
+      <div class="footer_main">
+        <p>&copy; 2025, ConfiDrinks project. Все права защищены.</p>
+        <div class="footer__columns">
+          <p class="footer__colums-heading">Связаться с нами:</p>
+          <div class="footer__column-contacts">
+            <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+            <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+          </div>
+        </div>
+        <div class="footer__columns">
+          <p class="footer__colums-heading">Соцсети</p>
+          <div class="footer__column-links">
+            <a class="footer__column-link" href="#"><img src="files/vk_color_white.svg" alt="Vk">Вконтакте</a>
+            <a class="footer__column-link" href="#"><img src="files/tiktok_color_white.svg" alt="TikTok">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

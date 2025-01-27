@@ -4,11 +4,7 @@ html, body {
     background-color: #F1CF8E;
 }
 
-.wrapper {
-    min-height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
+
 
 .container {
     max-width: 702px;
@@ -20,6 +16,8 @@ html, body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    overflow: hidden;
+
 }
 
 /* ------------------------------------- */

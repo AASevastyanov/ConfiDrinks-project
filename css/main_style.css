@@ -16,7 +16,7 @@
 .warning_block {
   display: flex;
   position: fixed;
-  width: 40vw;
+  width: 50vw;
   height: 35vh;
   background-color: rgb(227, 220, 220);
   top: 50%;
@@ -26,16 +26,18 @@
   border-radius: 8%;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  font-size: 40px;
 }
 
-.warning-text {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 50px;
-  padding: 60px;
+.warning__text {
+  display: block;
+  padding: 20px;
 }
 
-.no {
+.warning__text--hidden {
   display: none;
+  font-size: 35px;
+  padding: 20px;
 }
 
 .warning_cont {
@@ -58,12 +60,14 @@
   color: black;
 }
 
-/* Какой то пиздец сверху */
 
 
 
 /* ---ASIDE------------------------------------------------------- */
 
+.container_main {
+  min-height: 700px;
+}
 
 .content__block {
   display: flex;
@@ -88,18 +92,11 @@
   background-color: var(--color-search);
 }
 
-#search__input {
+#searchInput {
   height: 23px;
-  max-width: 250px;
   font-size: 18px;
   padding-left: 10px;
   border-radius: 6px;
-}
-
-.search__block-filter {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
 }
 
 /*--------------cocktailS----------------*/
@@ -117,8 +114,9 @@
 .cocktails__block {
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 100px 200px 1fr;
+  grid-template-rows: 100px 190px 1fr;
   column-gap: 10px;
+  row-gap: 10px;
   width: 490px;
   height: 350px;
   margin: 30px 0px;
@@ -127,7 +125,7 @@
   border-radius: 20px;
   box-shadow: 3px 5px 8px #E4B04B;
   transition: all 0.7s;
-  
+
 }
 
 .cocktails__block:hover {
@@ -146,12 +144,11 @@
 
 .cocktails__name {
   font-size: 32px;
-  margin: 14px 0;
+  align-self: center;
 }
 
 .cocktails__about {
   font-size: 20px;
-  margin-bottom: 14px;
 }
 
 .favorite {
@@ -162,8 +159,76 @@
 #show-more {
   display: block;
   padding: 10px 20px;
-  margin: 20px auto ;
+  margin: 20px auto;
   font-size: 30px;
   background-color: #f9c04ee6;
   border: 3px solid #F9BF4E;
+}
+
+/* ---------media------------ */
+
+@media (max-width:992px) {
+  .content__block {
+    flex-direction: column;
+  }
+
+  .search {
+    border: 0;
+  }
+
+  .search__block {
+    position: relative;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    padding: 20px 100px;
+  }
+  
+  #searchInput {
+    width: 250px;
+    font-size: 24px
+  }
+}
+
+@media (max-width:768px) {
+  .content__block {
+    flex-direction: column;
+  }
+
+  .search {
+    border: 0;
+  }
+
+  .search__block {
+    position: relative;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .search {
+    min-width: 0;
+  }
+
+  #searchInput {
+    width: 100px;
+  }
+
+  .cocktails__block {
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 50px 170px 1fr;
+    height: 280px;
+    width: 300px;
+    font-size: 10px;
+  }
+
+  .cocktails__name {
+    font-size: 20px;
+  }
+
+  .cocktails__about {
+    font-size: 16px;
+  }
 }

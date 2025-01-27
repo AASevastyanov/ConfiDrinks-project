@@ -1,5 +1,6 @@
 let favorites = JSON.parse(localStorage.getItem('favorite')) || [];
-allCocktails = []
+let allCocktails = []
+let displayedCocktails = [];
 let blocksNow = 0;
 const step = 6;
 
@@ -8,24 +9,26 @@ function appendcocktail() {
     .then(res => res.json())
     .then(data => {
       allCocktails = data.drinks;
+      displayedCocktails = data.drinks;
       showNext();
     });
 }
 
 
 function showNext() {
-  let slice = allCocktails.slice(blocksNow, blocksNow + step);
+  let slice = displayedCocktails.slice(blocksNow, blocksNow + step);
 
   slice.forEach(cocktail => {
-    createCocktailCard(cocktail)
+    createCocktailCard(cocktail);
   });
 
   blocksNow += step;
 
-  if (blocksNow >= allCocktails.length) {
+  if (blocksNow >= displayedCocktails.length) {
     document.getElementById('show-more').style.display = 'none';
   }
 }
+
 
 function createCocktailCard(cocktail) {
 
@@ -91,6 +94,31 @@ function createCocktailCard(cocktail) {
   });
 }
 
+function handleSearch() {
+  // Берём текст
+  const query = document.getElementById('searchInput').value
+    .toLowerCase()
+    .trim();
+
+  // Сбрасываем
+  blocksNow = 0;
+  document.getElementById('coct-page').innerHTML = '';
+  document.getElementById('show-more').style.display = 'block';
+
+  // Фильтруем из allCocktails
+  displayedCocktails = allCocktails.filter(cocktail => {
+    // Проверяем в названии
+    const nameMatch = cocktail.strDrink.toLowerCase().includes(query);
+    // Проверяем в ингредиентах (cocktail.strIngredients — массив?)
+    const ingMatch = cocktail.strIngredients.some(ing =>
+      ing.toLowerCase().includes(query)
+    );
+    // Коктейль подходит, если совпадает либо название, либо ингредиент
+    return (nameMatch || ingMatch);
+  });
+
+  showNext();
+}
 
 
 

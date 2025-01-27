@@ -14,6 +14,16 @@
 </head>
 
 <body>
+  <div id='warning'>
+    <div class="warning_block">
+      <p class="warning__text">Есть ли вам 18 лет?</p>
+      <p class="warning__text--hidden">Прости, но сайт только для ребят постарше!</p>
+      <div class="warning_cont">
+        <button class="warning_cont-button" id='warningYes'>Да</button>
+        <button class="warning_cont-button" id='warningNo'>Нет</button>
+      </div>
+    </div>
+  </div>
 
   <video id="background-video" autoplay muted loop>
     <source src="files/wallpaper.mp4" type="video/mp4">
@@ -25,11 +35,11 @@
     <div class="container">
       <div class="header__nav">
         <a class="header__logo" href="main.html">
-          <img src="files/logo.svg" alt="logo">
+          <img src="files/logo.svg" id="logo" alt="logo">
         </a>
         <div class="header__nav-list">
           <a class="header__nav-item" href="favorites.html">Избранные</a>
-          <a class="header__nav-item" href="aboutUs.html">Информация о нас</a>
+          <a class="header__nav-item" href="about_us.html">Информация о нас</a>
         </div>
         <div class="header__user-nav">
           <div class="profile">
@@ -51,33 +61,15 @@
         </div>
       </div>
     </div>
-
   </header>
   <main class="content">
     <div class="container">
-      <div class="content__block">
+      <div class="content__block container_main ">
         <aside class="search">
           <div class="search__block">
-            <label for="search__block-input">Какой коктейль ищешь? :
-              <input type="text" name="search__input" autocomplete="off" id="search__input">
+            <label for="search__block-input">Какой коктейль ищешь?
+              <input type="text" name="search__input" autocomplete="off" id="searchInput" oninput="handleSearch()">
             </label>
-            <ul class="search__block-filter">
-              <li class="search__block-checkbox">
-                <label for="filter-checkbox1">
-                  Опция 1
-                  <input type="checkbox" name="filter-checkbox" id="filter-checkbox1"></li>
-                </label>
-              <li class="search__block-checkbox">
-                <label for="filter-checkbox2">
-                  Опция 1
-                  <input type="checkbox" name="filter-checkbox" id="filter-checkbox2"></li>
-                </label>
-              <li class="search__block-checkbox">
-                <label for="filter-checkbox3">
-                  Опция 1
-                  <input type="checkbox" name="filter-checkbo" id="filter-checkbox3"></li>
-                </label>
-            </ul>
           </div>
         </aside>
         <article class="cocktails">
@@ -109,7 +101,7 @@
     </div>
   </footer>
 
-  <!-- <script src="js/warning.js"></script> -->
+  <script src="js/warning.js"></script>
   <script src="js/cocktailAppend.js"></script>
 </body>
 
