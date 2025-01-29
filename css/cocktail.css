@@ -75,3 +75,107 @@
   margin-top: 10px;
 
 }
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .cocktail-info {
+    grid-template-columns: 450px 1fr; 
+    grid-template-rows: 100px 200px 300px auto;
+    column-gap: 80px;
+    row-gap: 20px;
+  }
+
+  .cocktail-info__image {
+    grid-row: 1 / 3;
+  }
+
+  .cocktail-info__desk {
+    font-size: 24px;
+  }
+  .cocktail-info__type {
+    font-size: 20px;
+  }
+  .cocktail-info__name {
+    font-size: 34px;
+  }
+  .cocktail-info__ing-title,
+  .cocktail-info__ing-list {
+    font-size: 24px;
+  }
+
+  .cocktail-info__recept-title{
+    font-size: 20px;
+  }
+
+  .cocktail-info__recept {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 912px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .cocktail-info {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 20px;
+  }
+
+  .cocktail-info__image {
+    grid-row: 1 / 2;
+    max-height: 300px; 
+  }
+
+  .cocktail-info__desk,
+  .cocktail-info__type,
+  .cocktail-info__ing-list {
+    font-size: 20px;
+  }
+
+  .cocktail-info__name {
+    font-size: 28px;
+    margin: 0 auto;
+  }
+
+  .cocktail-info__ing-title {
+    font-size: 22px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cocktail-info {
+    row-gap: 15px;
+    padding-top: 30px; 
+  }
+
+  .cocktail-info__image {
+    max-height: 200px; 
+  }
+
+  .cocktail-info__desk,
+  .cocktail-info__type,
+  .cocktail-info__ing-list,
+  .cocktail-info__recept-title {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .cocktail-info__name {
+    font-size: 24px;
+  }
+
+  .cocktail-info__ing-title {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .cocktail-info__ing-list {
+    padding: 10px 0 20px 40px;
+  }
+}
