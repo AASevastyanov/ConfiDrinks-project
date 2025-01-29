@@ -10,7 +10,7 @@ fetch('js/cocktails.json')
     }
   });
 
-function infoAppend(info){
+function infoAppend(info) {
   document.querySelector('.cocktail-info__image').src = info.strImage;
   document.querySelector('.cocktail-info__desk').textContent = info.strDescription;
   document.querySelector('.cocktail-info__name').textContent = 'Коктейль ' + info.strDrink;

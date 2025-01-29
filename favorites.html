@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="files/candy_icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/note_style.css">
-  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/note.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/favorite.css">
   <title>ConfiDrinks - Избранные</title>
 </head>
+
 <body>
   <video id="background-video" autoplay muted loop>
     <source src="files/wallpaper.mp4" type="video/mp4">
@@ -25,7 +26,7 @@
         </a>
         <div class="header__nav-list">
           <a class="header__nav-item" href="favorites.html">Избранные</a>
-          <a class="header__nav-item" href="about_us.html">Информация о нас</a>
+          <a class="header__nav-item" href="about.html">Информация о нас</a>
         </div>
         <div class="header__user-nav">
           <div class="profile">
@@ -33,9 +34,14 @@
               <img src="files/profile.svg" alt="profile" id="profile__img">
             </a>
             <ul class="profile__list">
-              <a href="registration.html" >
+              <a href="registration.html">
                 <li class="profile__sign-link">
                   Вход/Регистрация
+                </li>
+              </a>
+              <a href="profile.html">
+                <li class="profile__sign-link">
+                  Мой профиль
                 </li>
               </a>
           </div>
@@ -72,4 +78,5 @@
   </footer>
   <script src="js/favorite.js"></script>
 </body>
+
 </html>

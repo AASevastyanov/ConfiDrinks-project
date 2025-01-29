@@ -13,7 +13,7 @@
   background-color: rgba(0, 0, 0, 0.79);
 }
 
-.warning_block {
+.warning__block {
   display: flex;
   position: fixed;
   width: 50vw;
@@ -40,13 +40,13 @@
   padding: 20px;
 }
 
-.warning_cont {
+.warning__cont {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.warning_cont-button {
+.warning__cont-button {
   font-size: 34px;
   width: 120px;
   margin-bottom: 30px;
@@ -55,15 +55,12 @@
 
 }
 
-.warning_cont-button:first-child {
+.warning__cont-button:first-child {
   background-color: rgba(67, 205, 67, 0.792);
   color: black;
 }
 
-
-
-
-/* ---ASIDE------------------------------------------------------- */
+/* -------------------ASIDE------------------------ */
 
 .container_main {
   min-height: 700px;
@@ -183,7 +180,7 @@
     margin: 20px auto;
     padding: 20px 100px;
   }
-  
+
   #searchInput {
     width: 250px;
     font-size: 24px

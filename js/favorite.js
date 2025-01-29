@@ -61,7 +61,7 @@ function createCocktailCard(cocktail) {
 
   card.addEventListener('click', (event) => {
     if (!event.target.closest('.list__note')) {
-      window.location.href = `cocktail_info.html?id=${cocktail.idDrink}`;
+      window.location.href = `cocktail.html?id=${cocktail.idDrink}`;
     }
   });
 }

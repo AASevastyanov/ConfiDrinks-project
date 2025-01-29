@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="candy_icon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <link rel="stylesheet" href="css/buttons/file_upload.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/my_profile.css">
-  <title>ConfiDrinks - сделай сам и насладись!</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="candy_icon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/profile.css">
+<title>ConfiDrinks - сделай сам и насладись!</title>
 
 <body>
   <video id="background-video" autoplay muted loop>
@@ -24,12 +18,12 @@
   <header class="header">
     <div class="container">
       <div class="header__nav">
-        <a class="header__logo" href="main.html">
+        <a class="header__logo" href="index.html">
           <img src="files/logo.svg" id="logo" alt="logo">
         </a>
         <div class="header__nav-list">
           <a class="header__nav-item" href="favorites.html">Избранные</a>
-          <a class="header__nav-item" href="about_us.html">Информация о нас</a>
+          <a class="header__nav-item" href="about.html">Информация о нас</a>
         </div>
         <div class="header__user-nav">
           <div class="profile">
@@ -37,12 +31,12 @@
               <img src="files/profile.svg" alt="profile" id="profile__img">
             </a>
             <ul class="profile__list">
-              <a href="registration.html" >
+              <a href="registration.html">
                 <li class="profile__sign-link">
                   Вход/Регистрация
                 </li>
               </a>
-              <a href="my_profile.html" >
+              <a href="profile.html">
                 <li class="profile__sign-link">
                   Мой профиль
                 </li>
@@ -56,7 +50,8 @@
     <div class="container">
       <div class="main__information">
         <div class="main__information-items">
-          <img id="avatar" src="" alt="Avatar" style="max-width: 500px; max-height: 500px; display: block; margin-top: 20px;">
+          <img id="avatar" src="files/white-back.png" alt="Avatar"
+            style="max-width: 500px; max-height: 500px; display: block; margin-top: 20px;">
           <label for="file" class="custum-file-upload">
             <div class="icon">
               <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +105,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/my_profile.js"></script>
+  <script src="js/profile.js"></script>
 </body>
 
 </html>

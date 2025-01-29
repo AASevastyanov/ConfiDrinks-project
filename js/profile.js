@@ -22,9 +22,8 @@ fileInput.addEventListener('change', () => {
   if (!file) return;
 
   const reader = new FileReader();
-  reader.onload = function(e) {
-    const base64URL = e.target.result; 
-    // Показываем в img
+  reader.onload = function (e) {
+    const base64URL = e.target.result;
     avatarImg.src = base64URL;
     localStorage.setItem('avatarImage', base64URL);
   };

@@ -38,6 +38,7 @@ function createCocktailCard(cocktail) {
   const img = document.createElement('img');
   img.classList = 'cocktails__block-image';
   img.src = cocktail.strImage;
+  img.alt = 'Фото коктейля';
   card.appendChild(img);
 
   const name = document.createElement('h2');
@@ -68,20 +69,15 @@ function createCocktailCard(cocktail) {
 
   document.getElementById('coct-page').appendChild(card);
 
-  
   const checkbox = card.querySelector('.fav-checkbox');
   checkbox.addEventListener('click', (event) => {
     if (checkbox.checked) {
       favorites.push(cocktail.idDrink);
-      
     } else {
       favorites = favorites.filter(id => id !== cocktail.idDrink);
     }
-
     localStorage.setItem('favorite', JSON.stringify(favorites));
-    
   });
-
 
   if (favorites.includes(cocktail.idDrink)) {
     checkbox.checked = true;
@@ -89,31 +85,25 @@ function createCocktailCard(cocktail) {
 
   card.addEventListener('click', (event) => {
     if (!event.target.closest('.list__note')) {
-      window.location.href = `cocktail_info.html?id=${cocktail.idDrink}`;
+      window.location.href = `cocktail.html?id=${cocktail.idDrink}`;
     }
   });
 }
 
 function handleSearch() {
-  // Берём текст
   const query = document.getElementById('searchInput').value
     .toLowerCase()
     .trim();
 
-  // Сбрасываем
   blocksNow = 0;
   document.getElementById('coct-page').innerHTML = '';
   document.getElementById('show-more').style.display = 'block';
 
-  // Фильтруем из allCocktails
   displayedCocktails = allCocktails.filter(cocktail => {
-    // Проверяем в названии
     const nameMatch = cocktail.strDrink.toLowerCase().includes(query);
-    // Проверяем в ингредиентах (cocktail.strIngredients — массив?)
     const ingMatch = cocktail.strIngredients.some(ing =>
       ing.toLowerCase().includes(query)
     );
-    // Коктейль подходит, если совпадает либо название, либо ингредиент
     return (nameMatch || ingMatch);
   });
 
